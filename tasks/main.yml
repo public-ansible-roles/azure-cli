@@ -1,0 +1,19 @@
+---
+# tasks file for azure-cli
+- name: "azure-cli | import rpm key for microsoft repository"
+  rpm_key:
+    state: present
+    key: https://packages.microsoft.com/keys/microsoft.asc
+
+- name: "azure-cli | set azure-cli.repo to remote host"
+  copy:
+    src: "{{ inventory_dir }}/roles/azure-cli/files/etc/yum.repos.d/azure-cli.repo"
+    dest: /etc/yum.repos.d/azure-cli.repo
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: "azure-cli | install azure-cli"
+  yum:
+    name: azure-cli
+    state: present
