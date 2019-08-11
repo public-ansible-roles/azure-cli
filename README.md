@@ -1,7 +1,8 @@
 azure-cli
 =========
 
-Role for installing Azure CLI, which is command-line tool providing a great experience for managing Azure resources.
+Role for installing Azure CLI, which is command-line tool providing a great experience for managing Azure resources.''
+jq, which is  a lightweight and flexible command-line JSON processor, is also installed.
 
 Requirements
 ------------
