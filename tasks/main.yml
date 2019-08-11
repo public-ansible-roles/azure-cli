@@ -17,3 +17,8 @@
   yum:
     name: azure-cli
     state: present
+
+- name: "azure-cli | install jq"
+  yum:
+    name: jq
+    state: present
